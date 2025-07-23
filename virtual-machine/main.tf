@@ -18,7 +18,7 @@ data "vcfa_region" "region" {
 
 data "vcfa_storage_class" "sc" {
   region_id = data.vcfa_region.region.id
-  name      = "vSAN Default Storage Policy"
+  name      = "vvcfa-storage-policy"
 }
 
 resource "vcfa_content_library" "cl" {
