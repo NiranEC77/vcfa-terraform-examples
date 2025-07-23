@@ -22,7 +22,7 @@ data "vcfa_storage_class" "sc" {
 }
 
 resource "vcfa_content_library" "cl" {
-  org_id      = data.vcfa_org.acme.id
+  org_id      = data.vcfa_org.niran-org.id
   name        = "My Library created with tf"
   description = "A simple library"
   storage_class_ids = [
