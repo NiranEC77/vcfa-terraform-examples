@@ -8,7 +8,7 @@ resource "vcfa_supervisor_namespace" "supervisor_namespace" {
 
   storage_classes_initial_class_config_overrides {
     limit = "1000000Mi"
-    name  = "vSAN Default Storage Policy"
+    name  = "vcfa-storage-policy"
   }
 
   zones_initial_class_config_overrides {
