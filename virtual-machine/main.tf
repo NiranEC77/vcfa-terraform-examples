@@ -1,19 +1,19 @@
 
 locals {
-  vm_name = "sample-vm"
-  region_name = "west"
-  vpc_name = "west-Default-VPC"
-  zone_name = "z-wld-a"
-  network_name = "vm-default"
+  vm_name = "niran-test-tf-vm"
+  region_name = "us-west"
+  vpc_name = "us-west-Default-VPC"
+  zone_name = "zone1"
+  network_name = "tf-vms-net"
 }
 
 
-data "vcfa_org" "acme" {
-  name = "acme"
+data "vcfa_org" "niran-org" {
+  name = "niran-org"
 }
 
 data "vcfa_region" "region" {
-  name = "west"
+  name = "us-west"
 }
 
 data "vcfa_storage_class" "sc" {
@@ -23,7 +23,7 @@ data "vcfa_storage_class" "sc" {
 
 resource "vcfa_content_library" "cl" {
   org_id      = data.vcfa_org.acme.id
-  name        = "My Library"
+  name        = "My Library created with tf"
   description = "A simple library"
   storage_class_ids = [
     data.vcfa_storage_class.sc.id
