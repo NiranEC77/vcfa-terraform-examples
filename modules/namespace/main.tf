@@ -7,7 +7,7 @@ resource "vcfa_supervisor_namespace" "supervisor_namespace" {
   vpc_name     = var.vpc_name
 
   storage_classes_initial_class_config_overrides {
-    limit = "1000Mi"
+    limit = "10240Mi"
     name  = "vcfa-storage-policy"
   }
 

@@ -4,7 +4,7 @@ locals {
   region_name = "us-west"
   vpc_name = "us-west-Default-VPC"
   zone_name = "zone1"
-  network_name = "tf-vms-net"
+  network_name = "vm-default"
 }
 
 
